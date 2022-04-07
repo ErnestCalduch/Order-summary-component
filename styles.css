@@ -1,0 +1,198 @@
+:root {
+    /* Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    /* Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-blue: hsl(210, 6%, 58%);
+    --Button-blue: hsl(244, 82%, 68%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    border: 0; 
+    padding: 0;
+}
+
+body {
+    background: url(images/pattern-background-desktop.svg) no-repeat 0 0;
+    background-size: cover;
+    background-color: var(--Pale-blue);
+    color: var(--Dark-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.card-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--White);
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(175, 175, 175)
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    background-image: url(/images/illustration-hero.svg);
+    background-size: cover;
+    border-radius: 20px 20px 0 0; 
+}
+
+.card-info {
+    width: 340px;
+    margin: 0 auto;
+}
+
+.card-info h1 {
+    margin-top: 50px;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.card-info-text {
+    color: var(--Desaturated-blue);
+    margin: 20px 0 40px 0;
+    line-height: 1.5rem;
+}
+
+.card-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 0 20px;
+}
+
+.plan-cost {
+    flex-grow: 1;
+    margin-left: 20px;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.plan-cost p:first-of-type {
+    font-size: 1.05rem;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+
+.plan-cost p:last-of-type {
+    font-size: 1.05rem;
+    color: var(--Desaturated-blue);
+}
+
+.change-plan {
+    font-size: 0.95rem;
+    font-weight: 900;
+    color: var(--Bright-blue);
+}
+
+.card-buttons {
+    margin-top: 40px;
+}
+
+.payment {
+    height: 50px;
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+.cancel-order {
+    margin: 30px 0 30px 0;
+    font-size: 0.95rem;
+    font-weight: 900;
+}
+
+/* Interactive states*/
+.change-plan p a:hover {
+    text-decoration: none;
+    color: var(--Button-blue);
+}
+
+.payment:hover {
+    background-color: var(--Button-blue);
+    cursor: pointer;
+}
+
+.cancel-order p a {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+.cancel-order p a:hover {
+    color: var(--Dark-blue);
+}
+
+
+
+.attribution { 
+    font-size: 12px; 
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    width: 100%;
+    color: var(--Dark-blue);
+}
+
+/*Media queries */
+@media only screen and (max-width: 400px) {
+    body {
+        background: url(images/pattern-background-mobile.svg) no-repeat 0 0;
+    }
+    .card {
+        width: 350px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(175, 175, 175)
+    }
+    .card-image {
+        height: 160px;
+    }
+    .card-info {
+        width: 260px;
+    }
+    .card-info h1 {
+        margin-top: 30px;
+        font-size: 1.4rem;
+    }    
+    .card-info-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .card-plan {
+        margin: 0 10px 0 10px;
+    }
+    .plan-cost {
+        margin-left: 15px;
+    }
+    
+    .plan-cost p:first-of-type {
+        font-size: 0.9rem;
+        margin-bottom: 1px;
+    }
+    
+    .plan-cost p:last-of-type {
+        font-size: 0.9rem;
+    }
+    
+    .change-plan {
+        font-size: 0.80rem;
+    }
+}
